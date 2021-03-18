@@ -7,7 +7,7 @@
 
 /* Two types of languages:object
 1. Strongly typed: type of variable is known at compile time (C++, Java, Swift)
-2. Dynamically typed: type of variable is known at compile time (Python, Ruby, JS)
+2. Dynamically typed: type of variable is known at run time (Python, Ruby, JS)
 
 BASIC DATA TYPES IN DART: 
 fundamental(int, double, string, bool), dynamic*/

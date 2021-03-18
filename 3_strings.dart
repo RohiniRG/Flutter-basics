@@ -1,7 +1,7 @@
 main() {
   var s1 = 'Single quotes work well for string literals';
   var s2 = "Double quotes works just as well";
-  var s3 = 'It\'s easy to use string deliminator';
+  var s3 = 'It\'s easy to use string deliminator'; // \ adds escape sequences
   var s4 = "It's even easier to use other deliminator";
 
   print(s1);
@@ -11,6 +11,7 @@ main() {
 
   // RAW String
   var s = r'In a RAW string, not even a \n gets special treatment.';
+  // doesn't consider escape sequences
   print("\n$s");
 
   // converting an int to string
@@ -31,7 +32,7 @@ a multiline string.""";
   print(s6);
 
   // string -> int
-  var one = int.parse('1');
+  var one = int.parse('1'); // converts string to int or mentioned type
   assert(one == 1); // If not True it will throw an error
   // uncomment below to see
 
@@ -43,10 +44,10 @@ a multiline string.""";
   assert(onePointone == 1.1);
 
   // int -> string
-  var oneAsString = 1.toString();
+  var oneAsString = 1.toString(); // converts given value to string
   assert(oneAsString == '1');
 
   // double -> string
-  var piAsString = 3.14159.toStringAsFixed(3);
+  var piAsString = 3.14159.toStringAsFixed(3); // precision of decimal given
   assert(piAsString == '3.141');
 }

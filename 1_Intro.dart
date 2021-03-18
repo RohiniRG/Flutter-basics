@@ -1,6 +1,6 @@
 // COMMENTS
 
-// Dart is a static type(once you define the type pof variable, you cannot change)
+// Dart is a static type(once you define the type of variable, you cannot change)
 // programming language
 
 // Dart supports 2 type of compilations:
