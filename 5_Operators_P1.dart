@@ -1,4 +1,4 @@
-void main() {
+main() {
   int num = 10 + 22;
   num = num - 2;
 
@@ -16,7 +16,7 @@ void main() {
   num *= 2;
   print(num);
 
-  // URANARY OPERATORS
+  // UNARY OPERATORS
   ++num;
   num++;
   num += 1;

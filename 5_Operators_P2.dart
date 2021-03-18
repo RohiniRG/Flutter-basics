@@ -14,7 +14,7 @@ main() {
   // }
 
   // Alternative for the above code
-  number = n?.num ?? 0;
+  number = n?.num;
 
   // This assigns default value if the variable which we are checking
   // from ?. is null.
@@ -23,7 +23,7 @@ main() {
   print(number);
 
   // ??= is a inplace changing null aware operator
-  // it chnages the value of the variable only
+  // it changges the value of the variable only permanently
   // if the variable is null then it assigns a default value to it
   var nums;
   print(nums ??= 100);
@@ -32,6 +32,7 @@ main() {
   // Ternary Operators just like C++.
   int num2 = 100;
   var result2 = num2 % 2 == 0 ? 'Even' : 'Odd';
+  // result2 becomes 'Even' if condition is True else 'Odd'
   print(result2);
 
   // Type Test 'is' KEYWORD
