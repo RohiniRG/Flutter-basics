@@ -1,8 +1,8 @@
 // COLLECTIONS
 
 void main() {
-  List name1 = ['Akhil', 'Bhalerao'];
-  var name2 = ['Rohini', 'Rao', 1, 100.234];
+  List name1 = ['Akhil', 'Bhalerao']; // same type of data
+  var name2 = ['Rohini', 'Rao', 1, 100.234]; // different data types
 
   var n = name1.length;
   var m = name2.length;
@@ -13,6 +13,7 @@ void main() {
   for (var n in name1) {
     print(n);
   }
+
   print("");
   for (var i = 0; i < name2.length; i++) {
     print(name2[i]);
@@ -36,10 +37,10 @@ void main() {
   var name4 = ['Jack', 'Jill'];
 
   // We are cloning name4 into name5 so updates in name4 will not reflect
-  // in name5
+  // in name5 // spread operator
   var name5 = [...name4];
 
-  // Directly copying name4 into name6
+  // Directly copying name4 into name6 // changes will affect
   var name6 = name4;
 
   // and now if we update name4
@@ -50,7 +51,7 @@ void main() {
   print(name6); // [Jack, Mill]
 
   print("");
-  // ------------------------------------------------------------------------
+  // --------------------------------------------------------------------
   // SET
   var AM = {'f', 'o', 'f', 'o'};
   print(AM);
@@ -72,11 +73,10 @@ void main() {
 
   print("");
   // ----------------------------------------------------------------------
-
   // MAP
   // same like python dictionary
 
-  // Defination
+  // Definition
   var map = Map();
   print(map);
 

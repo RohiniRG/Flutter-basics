@@ -33,7 +33,7 @@ main() {
   //3. forEach loop = higher order function
   numbers.forEach((n) => print('forEach: $n')); // => arrow operator
   // this is also known as arrow function
-  // basically behaves like the belo printNum function
+  // basically behaves like the below printNum function
   print('\n');
 
   //4. While loop
