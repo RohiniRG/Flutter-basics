@@ -49,9 +49,9 @@ class Home extends StatelessWidget {
       // Same applies for Image.network()
 
       // child: Icon(
-      // Icons.airport_shuttle,
-      // color: Colors.lightBlue,
-      // size: 80,)
+      //   Icons.airport_shuttle,
+      //   color: Colors.lightBlue,
+      //   size: 80,)
 
       // child: RaisedButton(
       //   onPressed: () {},
@@ -72,10 +72,10 @@ class Home extends StatelessWidget {
       // ),
 
       //   child: RaisedButton.icon(
-      //   onPressed: () {},
-      //   icon: Icon(Icons.mail),
-      //   label: Text('Mail me'),
-      //   color: Colors.amber,
+      //     onPressed: () {},
+      //     icon: Icon(Icons.mail),
+      //     label: Text('Mail me'),
+      //     color: Colors.amber,
       // )
 
       // child: IconButton(
@@ -123,28 +123,62 @@ class Home extends StatelessWidget {
       //   ], // multiple child widgets
       // ),
 
-      body: Column(
-        // main axis is vertical and cross axis is horizontal
-        mainAxisAlignment: MainAxisAlignment.end,
-        crossAxisAlignment: CrossAxisAlignment.end,
+      // body: Column(
+      //   // main axis is vertical and cross axis is horizontal
+      //   mainAxisAlignment: MainAxisAlignment.end,
+      //   crossAxisAlignment: CrossAxisAlignment.end,
+      //   children: [
+      //     Row(
+      //       children: [Text('HELLO'), Text('WORLD!')],
+      //     ),
+      //     Container(
+      //       padding: EdgeInsets.all(20.0),
+      //       color: Colors.cyan,
+      //       child: Text('ONE'),
+      //     ),
+      //     Container(
+      //       padding: EdgeInsets.all(30.0),
+      //       color: Colors.green[600],
+      //       child: Text('TWO'),
+      //     ),
+      //     Container(
+      //       padding: EdgeInsets.all(40.0),
+      //       color: Colors.purple[200],
+      //       child: Text('THREE'),
+      //     )
+      //   ],
+      // ),
+
+      body: Row(
         children: [
-          Row(
-            children: [Text('HELLO'), Text('WORLD!')],
+          Expanded(
+            child: Image.asset('assets/red-1.jpg'),
+            flex: 3,
           ),
-          Container(
-            padding: EdgeInsets.all(20.0),
-            color: Colors.cyan,
-            child: Text('ONE'),
+          Expanded(
+            // extends the current widget to occupy rest of the white space left in row
+            flex: 1, // higher flex more portion it takes up
+            child: Container(
+              padding: EdgeInsets.all(30.0),
+              color: Colors.cyan,
+              child: Text('1'),
+            ),
           ),
-          Container(
-            padding: EdgeInsets.all(30.0),
-            color: Colors.green[600],
-            child: Text('TWO'),
+          Expanded(
+            flex: 1,
+            child: Container(
+              padding: EdgeInsets.all(30.0),
+              color: Colors.pinkAccent,
+              child: Text('2'),
+            ),
           ),
-          Container(
-            padding: EdgeInsets.all(40.0),
-            color: Colors.purple[200],
-            child: Text('THREE'),
+          Expanded(
+            flex: 1,
+            child: Container(
+              padding: EdgeInsets.all(30.0),
+              color: Colors.amber,
+              child: Text('3'),
+            ),
           )
         ],
       ),
