@@ -6,7 +6,13 @@ void main() {
   ));
 }
 
-class IdCard extends StatelessWidget {
+class IdCard extends StatefulWidget {
+  @override
+  _IdCardState createState() => _IdCardState();
+}
+
+class _IdCardState extends State<IdCard> {
+  int counter = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,6 +22,15 @@ class IdCard extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.green,
         elevation: 0.0,
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          setState(() {
+            counter += 1;
+          });
+        },
+        backgroundColor: Colors.green,
+        child: Icon(Icons.add),
       ),
       body: Padding(
         padding: EdgeInsets.fromLTRB(30.0, 40.0, 30.0, 0.0),
@@ -87,13 +102,14 @@ class IdCard extends StatelessWidget {
                     SizedBox(
                         height: 10.0), // adds a box, here it will add space
                     Text(
-                      '1',
+                      '$counter',
                       style: TextStyle(
                           color: Colors.cyan[900],
                           letterSpacing: 2.0,
                           fontSize: 28.0,
                           fontWeight: FontWeight.bold),
                     ),
+
                     SizedBox(height: 30.0),
                     Row(
                       children: [
