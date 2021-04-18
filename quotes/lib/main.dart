@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'quote.dart';
+import 'quote_card.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -30,6 +31,11 @@ class _QuoteListState extends State<QuoteList> {
         author: 'Ocar Wilde', text: 'The truth is rarely pure and never simple')
   ];
 
+  // Widget quoteTemplate(quote) {
+  //   // making this into a stateless widget
+  //   return QuoteCard(quote: quote);
+  // }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -41,12 +47,49 @@ class _QuoteListState extends State<QuoteList> {
       ),
       body: Column(
         children: quotes
-            .map((quote) => Text(
-                  '${quote.text} - ${quote.author}',
-                  style: TextStyle(color: Colors.pink[100]),
-                ))
+            .map((quote) => QuoteCard(
+                quote: quote,
+                delete: () {
+                  setState(() {
+                    quotes.remove(quote);
+                  });
+                }))
             .toList(),
       ),
     );
   }
 }
+
+// class QuoteCard extends StatelessWidget {
+//   final Quote quote; // final value of this variable
+//   QuoteCard({this.quote}); // making a constructor to take the quote parameter
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return Card(
+//       margin: EdgeInsets.fromLTRB(16, 16, 16, 0),
+//       child: Padding(
+//         padding: const EdgeInsets.all(12.0),
+//         child: Column(
+//           crossAxisAlignment: CrossAxisAlignment.stretch,
+//           children: [
+//             Text(
+//               quote.text,
+//               style: TextStyle(
+//                 fontSize: 18.0,
+//                 color: Colors.pink[900],
+//               ),
+//             ),
+//             SizedBox(
+//               height: 6.0,
+//             ),
+//             Text(
+//               quote.author,
+//               style: TextStyle(fontSize: 14.0, color: Colors.pink[900]),
+//             )
+//           ],
+//         ),
+//       ),
+//     );
+//   }
+// }
